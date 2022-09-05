@@ -6,7 +6,7 @@ Simple docker compose project, using Node, MySql and Nginx, for Full Cycle cours
 - Clone this repo
 - docker-compose up
 
-This should start the 3 containers: Nginx redirecting from external port 80 , to Node running at internal 3000.
+This should start the 3 containers: Nginx redirecting from external port 8080 , to Node running at internal 3000.
 
 ----
 
