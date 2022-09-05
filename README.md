@@ -8,6 +8,8 @@ Simple docker compose project, using Node, MySql and Nginx, for Full Cycle cours
 
 This should start the 3 containers: Nginx redirecting from external port 80 , to Node running at internal 3000.
 
-Ps.: For Node part I used and  old API project I've made, so:
-List persons: /api/person
-Add person: /api/person/add/<NAME>
+----
+
+Ps.: For Node part I used and  old API project I've made in the past, so:
+- List persons (GET): /api/person
+- Add person (GET): /api/person/add/NAME
