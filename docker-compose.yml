@@ -14,8 +14,7 @@ services:
       - "3306"
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
-    networks:      
-      - my-network
+
 
   nodeserver:
     image: course_node
@@ -31,8 +30,7 @@ services:
       - WAIT_HOSTS_TIMEOUT=300
       - WAIT_SLEEP_INTERVAL=15
       - WAIT_HOST_CONNECT_TIMEOUT=15
-    networks:      
-      - my-network
+
 
   nginx:
     image: course_nginx
@@ -42,12 +40,7 @@ services:
     build:
         context: ./nginx
     ports:
-         - "8080:8080"
-    networks:
-      - my-network
+         - "8080:80"
 
-networks:
-  my-network:
-    external: true
 
 
