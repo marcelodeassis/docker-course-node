@@ -22,8 +22,8 @@ services:
       - db
     build:
        context: .
-    ports:
-      - "3000:3000"
+    # ports:
+    #   - "3000:3000" # not exposing to avoid direct access
     command: sh -c "/wait && node index.js"
     environment:
       - WAIT_HOSTS=db:3306
@@ -41,6 +41,8 @@ services:
         context: ./nginx
     ports:
          - "8080:80"
+
+
 
 
 
